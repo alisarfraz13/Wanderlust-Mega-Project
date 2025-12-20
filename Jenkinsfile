@@ -1,4 +1,4 @@
-@Library('Shared') _
+@Library('Jenkins_SharedLib') _
 pipeline {
     agent {label 'Node'}
     
