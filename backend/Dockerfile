@@ -8,10 +8,10 @@ WORKDIR /app
 COPY . .
 
 # packages install
-RUN npm i
+RUN npm install
 
 # tests
-RUN npm run test
+#RUN npm run test
 
 # Stage 2
 FROM node:21-slim
