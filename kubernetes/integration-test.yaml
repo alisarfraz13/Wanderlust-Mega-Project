@@ -12,8 +12,14 @@ spec:
         - name: tests
           image: alisarfraz13/wanderlust-backend-beta:v3
           command: ["npm", "run", "test:integration"]
+
           env:
             - name: MONGODB_URI
               value: "mongodb://mongo-service:27017/wanderlust"
+
             - name: REDIS_HOST
               value: "redis-service"
+
+            # 🔹 YEH LINE TIMEOUT KE LIYE ADD KI HAI
+            - name: JEST_TIMEOUT
+              value: "30000"
